@@ -1,0 +1,187 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+div.facebook-status {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+
+  // button container
+  div.button-container {
+    text-align: right;
+    width: 400px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 8px;
+    button.add-new-status {
+      padding: 0.8em 1em;
+      border: none;
+      background: transparent;
+      color: #333;
+      cursor: pointer;
+      outline: 0;
+    }
+  }
+
+  // status container
+  div.status-container {
+    height: 500px;
+    width: 400px;
+    background: #fff;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+
+    // status
+    div.status {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      z-index: 5;
+      div.status-timer-container {
+        padding: 1em 8px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        div.status-timer {
+          flex: 1;
+          height: 5px;
+          border-radius: 2px;
+          background: rgba(255, 255, 255, 0.3);
+          margin-right: 3px;
+          position: relative;
+          &::after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: "";
+            height: 5px;
+            border-radius: 2px;
+            width: 50%;
+            background: #fff;
+          }
+        }
+      }
+
+      // status body
+      div.status-body {
+        flex: 1;
+        display: flex;
+        background: #fff;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        padding: 1.5em;
+        padding-top: 4em;
+        p {
+          line-height: 25px;
+          text-align: center;
+        }
+      }
+    }
+
+    // new status
+    div.new-status {
+      height: 500px;
+      width: 400px;
+      border-radius: 8px;
+      background: #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(100%);
+      transition: transform 0.5s ease;
+      display: flex;
+      flex-direction: column;
+
+      button.save-status {
+        position: fixed;
+        display: inline-flex;
+        padding: 0.4em;
+        border-radius: 50%;
+        border: none;
+        right: 10px;
+        background: none;
+        font-weight: bolder;
+        color: #fff;
+        font-size: 1.4em;
+        background: rgba(0, 0, 0, 0.4);
+        bottom: 100px;
+        cursor: pointer;
+      }
+      textarea {
+        flex: 1;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        text-align: center;
+        padding: 2em 1em;
+        padding-top: 4em;
+        display: flex;
+        align-items: center;
+        border: none;
+        color: #fff;
+        resize: none;
+        transition: font-size, background 0.5s;
+        overflow: hidden;
+      }
+
+      div.color-container {
+        padding: 1em;
+        flex: 0 0 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        button {
+          height: 40px;
+          width: 40px;
+          border: none;
+          cursor: pointer;
+          border-radius: 5px;
+
+          &.orange {
+            background: orange;
+          }
+
+          &.blue {
+            background: blue;
+          }
+          &.yellow {
+            background: #344244;
+          }
+          &.darkblue {
+            background: darkblue;
+          }
+          &.slateblue {
+            background: slateblue;
+          }
+          &.pink {
+            background: pink;
+          }
+          &.dodgerblue {
+            background: dodgerblue;
+          }
+          &.teal {
+            background: teal;
+          }
+        }
+      }
+      &.open-dialog {
+        transform: translateY(0%);
+      }
+    }
+  }
+}

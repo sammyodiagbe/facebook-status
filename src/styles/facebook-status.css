@@ -1,0 +1,259 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+div.facebook-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+div.facebook-status div.button-container {
+  text-align: right;
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 8px;
+}
+
+div.facebook-status div.button-container button.add-new-status {
+  padding: 0.8em 1em;
+  border: none;
+  background: transparent;
+  color: #333;
+  cursor: pointer;
+  outline: 0;
+}
+
+div.facebook-status div.status-container {
+  height: 500px;
+  width: 400px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+div.facebook-status div.status-container div.status {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 5;
+}
+
+div.facebook-status div.status-container div.status div.status-timer-container {
+  padding: 1em 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+div.facebook-status div.status-container div.status div.status-timer-container div.status-timer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 5px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  margin-right: 3px;
+  position: relative;
+}
+
+div.facebook-status div.status-container div.status div.status-timer-container div.status-timer::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  height: 5px;
+  border-radius: 2px;
+  width: 50%;
+  background: #fff;
+}
+
+div.facebook-status div.status-container div.status div.status-body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fff;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  padding: 1.5em;
+  padding-top: 4em;
+}
+
+div.facebook-status div.status-container div.status div.status-body p {
+  line-height: 25px;
+  text-align: center;
+}
+
+div.facebook-status div.status-container div.new-status {
+  height: 500px;
+  width: 400px;
+  border-radius: 8px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+div.facebook-status div.status-container div.new-status button.save-status {
+  position: fixed;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0.4em;
+  border-radius: 50%;
+  border: none;
+  right: 10px;
+  background: none;
+  font-weight: bolder;
+  color: #fff;
+  font-size: 1.4em;
+  background: rgba(0, 0, 0, 0.4);
+  bottom: 100px;
+  cursor: pointer;
+}
+
+div.facebook-status div.status-container div.new-status textarea {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  text-align: center;
+  padding: 2em 1em;
+  padding-top: 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  color: #fff;
+  resize: none;
+  -webkit-transition: font-size, background 0.5s;
+  transition: font-size, background 0.5s;
+  overflow: hidden;
+}
+
+div.facebook-status div.status-container div.new-status div.color-container {
+  padding: 1em;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60px;
+          flex: 0 0 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+div.facebook-status div.status-container div.new-status div.color-container button {
+  height: 40px;
+  width: 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+div.facebook-status div.status-container div.new-status div.color-container button.orange {
+  background: orange;
+}
+
+div.facebook-status div.status-container div.new-status div.color-container button.blue {
+  background: blue;
+}
+
+div.facebook-status div.status-container div.new-status div.color-container button.yellow {
+  background: #344244;
+}
+
+div.facebook-status div.status-container div.new-status div.color-container button.darkblue {
+  background: darkblue;
+}
+
+div.facebook-status div.status-container div.new-status div.color-container button.slateblue {
+  background: slateblue;
+}
+
+div.facebook-status div.status-container div.new-status div.color-container button.pink {
+  background: pink;
+}
+
+div.facebook-status div.status-container div.new-status div.color-container button.dodgerblue {
+  background: dodgerblue;
+}
+
+div.facebook-status div.status-container div.new-status div.color-container button.teal {
+  background: teal;
+}
+
+div.facebook-status div.status-container div.new-status.open-dialog {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+/*# sourceMappingURL=facebook-status.css.map */
